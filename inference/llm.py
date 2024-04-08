@@ -74,7 +74,7 @@ def get_model(df_new_token, model):
 
 
 def get_similarity_encoder(
-        encode_model=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)), 'model', 'bert-base-nli-mean-tokens'))):
+        encode_model=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'model/bert-base-nli-mean-tokens')):
     encoder = SentenceTransformer(encode_model)
     return encoder
 
@@ -82,7 +82,7 @@ def get_similarity_encoder(
 def get_vectordb(re_no=1, df_collection_name="crafter",
                  df_path=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'database',
                                       'chroma_db'),
-                 df_model_name=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)), 'model', 'all-MiniLM-L6-v2'))):
+                 df_model_name=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'model/all-MiniLM-L6-v2')):
     embeddings = SentenceTransformerEmbeddings(model_name=df_model_name)
     chroma = chromadb.PersistentClient(path=df_path)
     collection = chroma.get_collection(df_collection_name)

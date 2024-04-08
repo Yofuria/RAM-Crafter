@@ -46,7 +46,7 @@ evaluation via --method and the specific dataset via --dataset. Let's take Fresh
 For RAM:
 
 ```
-python inference/RAM.py --dataset freshqa --result_path ./result/freshqa_ram.json --method RAM --vectordb_name chroma_db --model_path ./model/Llama-2-7b-chat-hf 
+python inference/RAM.py --result_path ./result/freshqa_ram.json --method RAM --vectordb_name chroma_db --model_path ./model/Llama-2-7b-chat-hf 
 ```
 
 Open-source models can be downloaded and loaded from models/ by default, you can change the path via --model_path. You

@@ -1,8 +1,7 @@
 import sys
-
-sys.path.append('/')
-
 import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import gym
 from typing import List
 from enum import Enum
@@ -118,7 +117,7 @@ class ReactAgent:
                      max_tokens=100,
                      model_name="gpt-4",
                      model_kwargs={"stop": "\n"},
-                     openai_api_key=os.environ['OPENAI_API_KEY']
+                     # openai_api_key=os.environ['OPENAI_API_KEY']
                  ),
                  sim_encoder=get_similarity_encoder()
                  ) -> None:
@@ -354,7 +353,8 @@ class ReactReflectAgent(ReactAgent):
                      max_tokens=100,
                      model_name="gpt-4",
                      model_kwargs={"stop": "\n"},
-                     openai_api_key=os.environ['OPENAI_API_KEY']),
+                     # openai_api_key=os.environ['OPENAI_API_KEY']
+                     ),
                  sim_encoder=get_similarity_encoder()
                  ) -> None:
 
