@@ -16,8 +16,6 @@ import logging
 import argparse
 from craft import craft_env
 
-openai.api_key = 'sk-bIL5v0zxFsMH9CP02a37C2E5F59e4061864a5eBb234e979c'
-openai.api_base = 'https://pro.aiskt.com/v1'
 
 
 class ReflexionStrategy(Enum):
